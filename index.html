@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio de Serigne Saliou BA — cybersécurité & pentest, projets ML et automatisation." />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Serigne Saliou BA — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2321c8b6' d='M32 2l26 15v30L32 62 6 47V17z'/%3E%3Cpath fill='%230b1220' d='M32 10l18 10v24L32 54 14 44V20z'/%3E%3Cpath fill='%23e6fffb' d='M24 38V26h8c5 0 8 2 8 6s-3 6-8 6h-8zm8-4c2 0 3-1 3-2s-1-2-3-2h-3v4h3z'/%3E%3C/svg%3E" />
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Aller en haut">
+      <span class="brand__mark">SB</span>
+      <span class="brand__text">Serigne Saliou BA</span>
+    </a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="sr-only">Ouvrir le menu</span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#impact">Leadership</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+
+        <button class="btn btn--ghost btn--icon" id="themeToggle" type="button" aria-label="Changer le thème">
+          <span class="icon" aria-hidden="true">◐</span>
+          <span class="btn__label">Thème</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__left">
+          <p class="badge">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Cybersécurité • Pentest • Automatisation
+          </p>
+
+          <h1 class="hero__title">
+            Je conçois des solutions <span class="accent">sûres</span> et <span class="accent">utiles</span>.
+          </h1>
+
+          <p class="hero__subtitle">
+            Élève ingénieur généraliste (École Centrale Casablanca) — passionné par le pentesting,
+            l’analyse des vulnérabilités et l’automatisation (ML/NLP).
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">Voir mes projets</a>
+
+            <a class="btn btn--ghost" href="assets/CV_Serigne_Saliou_BA.pdf" target="_blank" rel="noopener">
+              Télécharger mon CV
+            </a>
+
+            <a class="btn btn--ghost btn--icon" href="https://github.com/Ba-hack" target="_blank" rel="noopener">
+              <span class="icon" aria-hidden="true">⌁</span>
+              GitHub
+            </a>
+
+            <a class="btn btn--ghost btn--icon" href="https://www.linkedin.com/in/serigne-saliou-ba-607665284" target="_blank" rel="noopener">
+              <span class="icon" aria-hidden="true">in</span>
+              LinkedIn
+            </a>
+          </div>
+
+          <div class="hero__stats" role="list">
+            <div class="stat" role="listitem">
+              <div class="stat__k">Focus</div>
+              <div class="stat__v">Pentest & Sécurité applicative</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__k">Stack</div>
+              <div class="stat__v">Linux • Réseau • Python • ML</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__k">Langues</div>
+              <div class="stat__v">Français • Anglais</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="portrait" aria-label="Photo de profil">
+            <img src="assets/profile.jpeg" alt="Photo de Serigne Saliou BA" loading="eager" />
+            <div class="portrait__ring" aria-hidden="true"></div>
+          </div>
+
+          <div class="terminal" aria-label="Mini terminal">
+            <div class="terminal__top">
+              <span class="dot dot--r" aria-hidden="true"></span>
+              <span class="dot dot--y" aria-hidden="true"></span>
+              <span class="dot dot--g" aria-hidden="true"></span>
+              <span class="terminal__title">pentest@portfolio:~</span>
+            </div>
+
+            <div class="terminal__body" id="termBody">
+              <div class="line"><span class="prompt">$</span> whoami</div>
+              <div class="line out">Serigne Saliou BA — engineering student, security & automation.</div>
+              <div class="line"><span class="prompt">$</span> cat highlights.txt</div>
+              <div class="line out">• Lab virtualisé (Kali/OWASP/Windows) • Automatisation rapports pentest • Password manager chiffré</div>
+              <div class="line"><span class="prompt">$</span> open projects</div>
+              <div class="line out"><a href="#projects">↳ Aller à la section Projets</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll" href="#about" aria-label="Faire défiler vers À propos">
+        <span class="scroll__mouse" aria-hidden="true"></span>
+        <span class="scroll__text">Défiler</span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <h2>À propos</h2>
+          <p>Un parcours scientifique, une approche “hands-on”, et une obsession : comprendre puis sécuriser.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Mon profil</h3>
+            <p>
+              Je suis élève ingénieur généraliste à l’École Centrale Casablanca, avec un fort intérêt
+              pour la cybersécurité (pentesting) et l’automatisation par le machine learning.
+              J’aime construire des outils concrets : de la CLI propre, de la crypto appliquée, et des pipelines qui
+              font gagner du temps aux équipes.
+            </p>
+            <div class="chips">
+              <span class="chip">Pentest</span>
+              <span class="chip">Sécurité applicative</span>
+              <span class="chip">Réseau</span>
+              <span class="chip">Python</span>
+              <span class="chip">ML/NLP</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Parcours</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <div class="timeline__date">Depuis 2024</div>
+                <div class="timeline__content">
+                  <strong>Cycle ingénieur</strong> — École Centrale Casablanca (Maroc), Génie Généraliste
+                </div>
+              </li>
+              <li class="timeline__item">
+                <div class="timeline__date">2022 – 2024</div>
+                <div class="timeline__content">
+                  <strong>CPGE (PCSI → PC)</strong> — Prépa de Thiès (première promotion publique), Sénégal
+                </div>
+              </li>
+              <li class="timeline__item">
+                <div class="timeline__date">2022</div>
+                <div class="timeline__content">
+                  <strong>Bac scientifique</strong> — Série Sciences expérimentales, Mention Très Bien
+                </div>
+              </li>
+            </ol>
+
+            <div class="callout">
+              <span class="callout__icon" aria-hidden="true">◎</span>
+              <div>
+                <strong>Objectif</strong><br />
+                Stage en cybersécurité / pentest (ou security automation) — je peux contribuer sur des audits,
+                scripts, reporting, tooling, et lab.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compétences</h2>
+          <p>Ce que je maîtrise aujourd’hui, et ce que je pratique régulièrement en lab.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Cybersécurité & Pentest</h3>
+            <ul class="list">
+              <li>Recon & scanning : Nmap, Wireshark</li>
+              <li>Exploitation & tooling : Metasploit, Burp Suite, SQLmap</li>
+              <li>OWASP Top 10, reverse shell, privilege escalation (lab)</li>
+              <li>Rédaction : constats, recommandations, standardisation</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Réseaux & Systèmes</h3>
+            <ul class="list">
+              <li>Routing/switching : OSPF, RIP, BGP, VLAN, STP</li>
+              <li>NAT, ACLs, segmentation (Host-only/Bridge)</li>
+              <li>Linux & Windows (admin de base, troubleshooting)</li>
+              <li>VirtualBox / VMware : environnements isolés</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Data & ML</h3>
+            <ul class="list">
+              <li>Python, SQL</li>
+              <li>Scikit-learn, LightGBM, SHAP</li>
+              <li>Power BI : dashboards & storytelling</li>
+              <li>CI/CD & gestion : GitHub, Trello</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid grid--2 mt">
+          <div class="card">
+            <h3>Compétences comportementales</h3>
+            <div class="chips chips--soft">
+              <span class="chip">Esprit d’équipe</span>
+              <span class="chip">Rigueur & sens du détail</span>
+              <span class="chip">Curiosité</span>
+              <span class="chip">Communication claire</span>
+              <span class="chip">Gestion du stress</span>
+              <span class="chip">Autonomie</span>
+              <span class="chip">Adaptabilité</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Boîte à outils (tags)</h3>
+            <div class="chips">
+              <span class="chip">Kali Linux</span>
+              <span class="chip">OWASP Juice Shop</span>
+              <span class="chip">Metasploitable</span>
+              <span class="chip">Windows 7/10</span>
+              <span class="chip">Streamlit</span>
+              <span class="chip">YOLOv8</span>
+              <span class="chip">3D printing</span>
+              <span class="chip">Laser cutting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <h2>Projets</h2>
+          <p>Une sélection orientée “impact” : sécurité, automatisation, et projets ML appliqués.</p>
+        </div>
+
+        <div class="filters" aria-label="Filtres de projets">
+          <button class="pill is-active" data-filter="all" type="button">Tous</button>
+          <button class="pill" data-filter="cyber" type="button">Cybersécurité</button>
+          <button class="pill" data-filter="ml" type="button">ML / Data</button>
+          <button class="pill" data-filter="iot" type="button">IoT / Vision</button>
+        </div>
+
+        <div class="grid grid--3" id="projectsGrid">
+          <!-- Project: Pentest report automation -->
+          <article class="project" data-tags="cyber ml">
+            <div class="project__top">
+              <h3>Automatisation des rapports de pentest (ML/NLP)</h3>
+              <p class="muted">Productivité • Qualité • Standardisation</p>
+            </div>
+            <ul class="list">
+              <li>Structuration automatique des constats, synthèses et recommandations.</li>
+              <li>Objectif : gagner du temps et homogénéiser la qualité des livrables.</li>
+              <li>Approche : templates + contrôle de cohérence + scoring.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">NLP</span><span class="chip">ML</span><span class="chip">Reporting</span>
+            </div>
+            <div class="project__actions">
+              <a class="link" href="https://github.com/Ba-hack" target="_blank" rel="noopener">Repo (à lier)</a>
+            </div>
+          </article>
+
+          <!-- Project: Virtual lab -->
+          <article class="project" data-tags="cyber">
+            <div class="project__top">
+              <h3>Lab cybersécurité virtualisé</h3>
+              <p class="muted">VirtualBox/VMware • Kali • Cibles vulnérables</p>
+            </div>
+            <ul class="list">
+              <li>Environnement isolé : NAT / Host-only / Bridge, segmentation et tests de connectivité.</li>
+              <li>Scénarios : reverse shell, phishing, élévation de privilèges, post-exploitation.</li>
+              <li>Analyse : captures Wireshark, logs systèmes, diagnostic réseau.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">Kali</span><span class="chip">Nmap</span><span class="chip">Wireshark</span><span class="chip">Metasploit</span>
+            </div>
+          </article>
+
+          <!-- Project: Password manager -->
+          <article class="project" data-tags="cyber">
+            <div class="project__top">
+              <h3>pwmgr — Password manager local (vault chiffré)</h3>
+              <p class="muted">Crypto appliquée • CLI propre • Tests</p>
+            </div>
+            <ul class="list">
+              <li>Vault JSON chiffré, aucune donnée en clair sur disque (AES-256-GCM + AAD).</li>
+              <li>KDF Argon2id, copie au presse-papiers avec auto-clear, audit & backups chiffrés.</li>
+              <li>Architecture simple : CLI → decrypt → action → re-encrypt → sauvegarde atomique.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Argon2id</span><span class="chip">AES-GCM</span><span class="chip">Typer</span><span class="chip">pytest</span>
+            </div>
+            <div class="project__actions">
+              <a class="link" href="assets/pwmgr_rapport.pdf" target="_blank" rel="noopener">Lire le rapport (PDF)</a>
+            </div>
+          </article>
+
+          <!-- Project: Appendicitis ML -->
+          <article class="project" data-tags="ml">
+            <div class="project__top">
+              <h3>Medical Decision Support — Appendicite pédiatrique</h3>
+              <p class="muted">Prédiction • Explainability • Streamlit</p>
+            </div>
+            <ul class="list">
+              <li>Modèles évalués : SVM, Random Forest, LightGBM ; meilleur LightGBM (ROC-AUC ≈ 0,995).</li>
+              <li>Interprétabilité : explications SHAP pour renforcer la confiance clinique.</li>
+              <li>Interface Streamlit : saisie des symptômes/tests → prédiction + explications.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">LightGBM</span><span class="chip">SHAP</span><span class="chip">Streamlit</span><span class="chip">Scikit-learn</span>
+            </div>
+          </article>
+
+          <!-- Project: Smart trash bin -->
+          <article class="project" data-tags="iot ml">
+            <div class="project__top">
+              <h3>PLBD — Poubelle intelligente (Computer Vision)</h3>
+              <p class="muted">YOLOv8 • Prototypage • Capteur de niveau</p>
+            </div>
+            <ul class="list">
+              <li>Classification des déchets en temps réel via détection d’objets (YOLOv8).</li>
+              <li>Capteur de niveau : suivi du remplissage pour optimiser la collecte.</li>
+              <li>Prototypage : découpage laser + impression 3D pour le boîtier.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">YOLOv8</span><span class="chip">Computer Vision</span><span class="chip">IoT</span><span class="chip">3D printing</span>
+            </div>
+          </article>
+
+          <!-- Project: Power BI -->
+          <article class="project" data-tags="ml">
+            <div class="project__top">
+              <h3>Analyse crimes — Afrique subsaharienne (Power BI)</h3>
+              <p class="muted">Data storytelling • Dashboarding</p>
+            </div>
+            <ul class="list">
+              <li>Nettoyage & préparation des données, indicateurs clés.</li>
+              <li>Tableaux de bord interactifs : tendances, comparaison pays, cartes.</li>
+              <li>Objectif : rendre les insights actionnables et compréhensibles.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">Power BI</span><span class="chip">Data viz</span><span class="chip">KPIs</span><span class="chip">ETL</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="muted mt-sm">
+          Astuce : tu peux remplacer “Repo (à lier)” par le lien exact de chaque dépôt GitHub quand tu les publies.
+        </p>
+      </div>
+    </section>
+
+    <!-- IMPACT / LEADERSHIP -->
+    <section class="section" id="impact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Leadership & Impact</h2>
+          <p>Au-delà de la tech : organiser, fédérer, agir.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Président Association ASEED</h3>
+            <ul class="list">
+              <li>Organisation de journées d’excellence (récompense des meilleurs élèves).</li>
+              <li>Actions sociales : distribution de moustiquaires, consultations gratuites.</li>
+              <li>Journées de reboisement et activités communautaires.</li>
+              <li>Coordination d’équipe, partenaires & intervenants.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">Leadership</span><span class="chip">Gestion de projet</span><span class="chip">Impact social</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Ce que ça dit à un recruteur</h3>
+            <p>
+              Je sais prendre un sujet flou, le structurer, et livrer quelque chose de présentable.
+              Je suis à l’aise avec les environnements techniques… et avec les humains.
+            </p>
+            <div class="callout">
+              <span class="callout__icon" aria-hidden="true">✦</span>
+              <div>
+                <strong>Valeur ajoutée</strong><br />
+                Autonomie + rigueur + capacité à expliquer simplement (utile en audit, reporting et remédiation).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certs">
+      <div class="container">
+        <div class="section__head">
+          <h2>Certifications</h2>
+          <p>Une base solide en réseau & sécurité, renforcée par la pratique.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Cybersécurité</h3>
+            <ul class="list">
+              <li>Google Cybersecurity</li>
+              <li>CompTIA PenTest+ (PT0-002)</li>
+              <li>Cybersecurity Attack & Defense Fundamentals (EC‑Council)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Réseaux</h3>
+            <ul class="list">
+              <li>Cisco CCNA (200-301)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Gestion de projet</h3>
+            <ul class="list">
+              <li>Google Project Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p>Envie de discuter d’un stage, d’un projet, ou d’un audit ?</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Me joindre</h3>
+            <div class="contact">
+              <button class="contact__row" id="copyEmail" type="button">
+                <span class="contact__k">Email</span>
+                <span class="contact__v">serignesaliou.ba@centrale-casablanca.ma</span>
+                <span class="contact__copy" aria-hidden="true">copier</span>
+              </button>
+
+              <div class="contact__row">
+                <span class="contact__k">Téléphone</span>
+                <span class="contact__v">+221 78 334 6310</span>
+              </div>
+
+              <a class="contact__row" href="https://github.com/Ba-hack" target="_blank" rel="noopener">
+                <span class="contact__k">GitHub</span>
+                <span class="contact__v">github.com/Ba-hack</span>
+              </a>
+
+              <a class="contact__row" href="https://www.linkedin.com/in/serigne-saliou-ba-607665284" target="_blank" rel="noopener">
+                <span class="contact__k">LinkedIn</span>
+                <span class="contact__v">/in/serigne-saliou-ba-607665284</span>
+              </a>
+            </div>
+
+            <div class="hero__cta mt-sm">
+              <a class="btn btn--primary" href="mailto:serignesaliou.ba@centrale-casablanca.ma?subject=Contact%20Portfolio%20-%20Serigne%20Saliou%20BA">
+                M’écrire
+              </a>
+              <a class="btn btn--ghost" href="assets/CV_Serigne_Saliou_BA.pdf" target="_blank" rel="noopener">
+                CV (PDF)
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Message rapide</h3>
+            <form class="form" action="mailto:serignesaliou.ba@centrale-casablanca.ma" method="post" enctype="text/plain">
+              <label>
+                Votre nom
+                <input name="name" type="text" placeholder="Ex: Marie Dupont" required />
+              </label>
+              <label>
+                Votre email
+                <input name="email" type="email" placeholder="Ex: marie@entreprise.com" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="5" placeholder="Bonjour Serigne, ..." required></textarea>
+              </label>
+              <button class="btn btn--primary" type="submit">Envoyer</button>
+              <p class="muted mt-sm">
+                (Le formulaire utilise votre client mail. Pour un formulaire “full web”, on peut ajouter Formspree/Netlify.)
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer__left">
+            <span class="muted">© <span id="year"></span> Serigne Saliou BA</span>
+          </div>
+          <div class="footer__right">
+            <a class="muted" href="#top">Retour en haut ↑</a>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
